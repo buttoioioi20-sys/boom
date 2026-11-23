@@ -1,0 +1,3 @@
+const {contextBridge,ipcRenderer:r}=require("electron");
+const c=n=>(a)=>r.invoke(n,a);
+contextBridge.exposeInMainWorld("api",{versions:c("versions"),search:c("search"),install:c("install"),login:c("login"),accounts:c("accounts"),launch:c("launch"),skinsList:c("skinsList"),skinsAdd:c("skinsAdd"),skinsCurrent:c("skinsCurrent"),skinsSaveCurrent:c("skinsSaveCurrent"),skinsLookup:c("skinsLookup"),skinsWear:c("skinsWear"),profiles:c("profiles"),open:c("open"),counts:c("counts"),installed:c("installed"),removeFile:c("removeFile"),applyUpdate:c("applyUpdate"),addFile:c("addFile"),openSub:c("openSub"),setMenuBg:c("setMenuBg"),cfgWrite:c("cfgWrite"),onLog:f=>r.on("log",(e,m)=>f(m))});

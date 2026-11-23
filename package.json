@@ -1,0 +1,43 @@
+{
+ "name": "milky-client",
+ "version": "1.0.0",
+ "description": "Milky Client launcher",
+ "main": "main.js",
+ "scripts": {
+  "start": "electron .",
+  "dist": "electron-builder"
+ },
+ "dependencies": {
+  "minecraft-launcher-core": "^3.18.2",
+  "msmc": "^5.0.5",
+  "@fontsource/pirata-one": "^5.0.0"
+ },
+ "devDependencies": {
+  "electron": "^33.0.0",
+  "electron-builder": "^25.0.0"
+ },
+ "build": {
+  "appId": "com.milky.client",
+  "productName": "Milky Client",
+  "files": [
+   "main.js",
+   "preload.js",
+   "renderer/**"
+  ],
+  "win": {
+   "target": "nsis"
+  },
+  "mac": {
+   "target": "dmg",
+   "identity": null,
+   "category": "public.app-category.games"
+  },
+  "linux": {
+   "target": "AppImage",
+   "category": "Game",
+   "maintainer": "Milky Client"
+  }
+ },
+ "author": "Milky Client <noreply@example.com>",
+ "homepage": "https://github.com/"
+}
